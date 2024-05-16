@@ -1,0 +1,22 @@
++ echo 'Logging output to experiments/logs/detectron2_test_retinanet_R_101_FPN_3x__2024-05-07_13-49-17.txt'
+Logging output to experiments/logs/detectron2_test_retinanet_R_101_FPN_3x__2024-05-07_13-49-17.txt
++ OUTPUT_DIR=./output/retinanet_R_101_FPN_3x
++ python /Users/dymello/Neo/For_USTS_DATABASE/BadNets/detectron2-main/tools/train_net.py --num-gpus 1 --config-file configs/retinanet_R_101_FPN_3x.yaml --eval-only MODEL.WEIGHTS path/to/models/model_final.pth OUTPUT_DIR ./output/retinanet_R_101_FPN_3x
+Command Line Args: Namespace(config_file='configs/retinanet_R_101_FPN_3x.yaml', resume=False, eval_only=True, num_gpus=1, num_machines=1, machine_rank=0, dist_url='tcp://127.0.0.1:49653', opts=['MODEL.WEIGHTS', 'path/to/models/model_final.pth', 'OUTPUT_DIR', './output/retinanet_R_101_FPN_3x'])
+Traceback (most recent call last):
+  File "/Users/dymello/Neo/For_USTS_DATABASE/BadNets/detectron2-main/tools/train_net.py", line 175, in <module>
+    invoke_main()  # pragma: no cover
+    ^^^^^^^^^^^^^
+  File "/Users/dymello/Neo/For_USTS_DATABASE/BadNets/detectron2-main/tools/train_net.py", line 164, in invoke_main
+    launch(
+  File "/opt/anaconda3/envs/myenv/lib/python3.11/site-packages/detectron2/engine/launch.py", line 84, in launch
+    main_func(*args)
+  File "/Users/dymello/Neo/For_USTS_DATABASE/BadNets/detectron2-main/tools/train_net.py", line 133, in main
+    cfg = setup(args)
+          ^^^^^^^^^^^
+  File "/Users/dymello/Neo/For_USTS_DATABASE/BadNets/detectron2-main/tools/train_net.py", line 125, in setup
+    cfg.merge_from_file(args.config_file)
+  File "/opt/anaconda3/envs/myenv/lib/python3.11/site-packages/detectron2/config/config.py", line 45, in merge_from_file
+    assert PathManager.isfile(cfg_filename), f"Config file '{cfg_filename}' does not exist!"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Config file 'configs/retinanet_R_101_FPN_3x.yaml' does not exist!

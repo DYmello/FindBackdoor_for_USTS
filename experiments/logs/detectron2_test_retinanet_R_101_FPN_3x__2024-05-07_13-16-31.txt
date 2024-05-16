@@ -1,0 +1,5 @@
++ echo 'Logging output to experiments/logs/detectron2_test_retinanet_R_101_FPN_3x__2024-05-07_13-16-31.txt'
+Logging output to experiments/logs/detectron2_test_retinanet_R_101_FPN_3x__2024-05-07_13-16-31.txt
++ OUTPUT_DIR=./output/retinanet_R_101_FPN_3x
++ python tools/train_net.py --num-gpus 1 --config-file configs/retinanet_R_101_FPN_3x.yaml --eval-only MODEL.WEIGHTS path/to/models/model_final.pth OUTPUT_DIR ./output/retinanet_R_101_FPN_3x
+python: can't open file '/Users/dymello/Neo/For_USTS_DATABASE/BadNets/tools/train_net.py': [Errno 2] No such file or directory

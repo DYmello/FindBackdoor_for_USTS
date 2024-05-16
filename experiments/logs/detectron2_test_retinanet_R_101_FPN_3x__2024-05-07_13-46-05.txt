@@ -1,0 +1,5 @@
++ echo 'Logging output to experiments/logs/detectron2_test_retinanet_R_101_FPN_3x__2024-05-07_13-46-05.txt'
+Logging output to experiments/logs/detectron2_test_retinanet_R_101_FPN_3x__2024-05-07_13-46-05.txt
++ OUTPUT_DIR=./output/retinanet_R_101_FPN_3x
++ python /Users/dymello/Neo/For_USTS_DATABASE/BadNets/detectron2-main/tools --num-gpus 1 --config-file configs/retinanet_R_101_FPN_3x.yaml --eval-only MODEL.WEIGHTS path/to/models/model_final.pth OUTPUT_DIR ./output/retinanet_R_101_FPN_3x
+/opt/anaconda3/envs/myenv/bin/python: can't find '__main__' module in '/Users/dymello/Neo/For_USTS_DATABASE/BadNets/detectron2-main/tools'

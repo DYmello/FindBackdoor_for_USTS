@@ -1,0 +1,25 @@
++ echo 'Logging output to experiments/logs/detectron2_test_0_model_final_2024-05-07_14-09-01.txt'
+Logging output to experiments/logs/detectron2_test_0_model_final_2024-05-07_14-09-01.txt
++ OUTPUT_DIR=./output/0
++ TRAIN_NET_PY_PATH=/Users/dymello/Neo/For_USTS_DATABASE/BadNets/detectron2-main/tools/train_net.py
++ CONFIG_FILE_PATH=/Users/dymello/Neo/For_USTS_DATABASE/BadNets/detectron2-main/configs/COCO-Detection/0.yaml
++ MODEL_WEIGHTS_PATH=/absolute/path/to/models/retinanet_R_101_FPN_3x.pth
++ python /Users/dymello/Neo/For_USTS_DATABASE/BadNets/detectron2-main/tools/train_net.py --config-file /Users/dymello/Neo/For_USTS_DATABASE/BadNets/detectron2-main/configs/COCO-Detection/0.yaml --eval-only MODEL.WEIGHTS /absolute/path/to/models/retinanet_R_101_FPN_3x.pth OUTPUT_DIR ./output/0 model_final
+Command Line Args: Namespace(config_file='/Users/dymello/Neo/For_USTS_DATABASE/BadNets/detectron2-main/configs/COCO-Detection/0.yaml', resume=False, eval_only=True, num_gpus=1, num_machines=1, machine_rank=0, dist_url='tcp://127.0.0.1:49653', opts=['MODEL.WEIGHTS', '/absolute/path/to/models/retinanet_R_101_FPN_3x.pth', 'OUTPUT_DIR', './output/0', 'model_final'])
+Traceback (most recent call last):
+  File "/Users/dymello/Neo/For_USTS_DATABASE/BadNets/detectron2-main/tools/train_net.py", line 175, in <module>
+    invoke_main()  # pragma: no cover
+    ^^^^^^^^^^^^^
+  File "/Users/dymello/Neo/For_USTS_DATABASE/BadNets/detectron2-main/tools/train_net.py", line 164, in invoke_main
+    launch(
+  File "/opt/anaconda3/envs/myenv/lib/python3.11/site-packages/detectron2/engine/launch.py", line 84, in launch
+    main_func(*args)
+  File "/Users/dymello/Neo/For_USTS_DATABASE/BadNets/detectron2-main/tools/train_net.py", line 133, in main
+    cfg = setup(args)
+          ^^^^^^^^^^^
+  File "/Users/dymello/Neo/For_USTS_DATABASE/BadNets/detectron2-main/tools/train_net.py", line 125, in setup
+    cfg.merge_from_file(args.config_file)
+  File "/opt/anaconda3/envs/myenv/lib/python3.11/site-packages/detectron2/config/config.py", line 45, in merge_from_file
+    assert PathManager.isfile(cfg_filename), f"Config file '{cfg_filename}' does not exist!"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Config file '/Users/dymello/Neo/For_USTS_DATABASE/BadNets/detectron2-main/configs/COCO-Detection/0.yaml' does not exist!
