@@ -31,12 +31,12 @@ def create_image_with_opacity_gradient(dominant_color, original_size, scale=0.4)
     return new_image
 
 if __name__ == "__main__":
-    image_path = '/Users/dymello/Desktop/pic1.jpg'  # 替换为您的图像文件路径
+    image_path = './pic.jpg'  
     image = Image.open(image_path)
-    image = image.convert('RGB')  # 确保图像是 RGB 格式
+    image = image.convert('RGB')  
 
     dominant_color = find_dominant_color(image)
     scaled_image = create_image_with_opacity_gradient(dominant_color, image.size)
 
-    scaled_image.show()  # 显示图像
-    scaled_image.save('Block1.png')  # 保存图像
+    scaled_image.show()  
+    scaled_image.save('Block1.png') 
